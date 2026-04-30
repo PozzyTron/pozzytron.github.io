@@ -1,103 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Domain | Official Site</title>
-    <style>
-        /* 1. LOADING SCREEN STYLES */
-        #loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background-color: #121212;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999; /* Stay on top */
-            transition: opacity 0.5s ease, visibility 0.5s;
-        }
-
-        /* The Spinner Animation */
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 3px solid rgba(255, 255, 255, 0.1);
-            border-top: 3px solid #007bff; /* Match your accent color */
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Class to hide the loader */
-        .loader-hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        /* 2. MAIN PAGE STYLES */
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden; /* Prevent scrolling while loading */
-        }
-
-        .container {
-            text-align: center;
-            padding: 2rem;
-            max-width: 400px;
-        }
-
-        h1 { color: #ffffff; margin-bottom: 1rem; }
-        p { color: #b0b0b0; line-height: 1.6; }
-        
-        .accent {
-            height: 4px;
-            width: 50px;
-            background: #007bff;
-            margin: 0 auto 1.5rem;
-            border-radius: 2px;
-        }
-    </style>
+    <title>PozzyTron | Ana Sayfa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Loading Screen -->
-    <div id="loader">
-        <div class="spinner"></div>
-    </div>
+    <!-- Header / Cover Section -->
+    <header class="cover">
+        <div class="overlay">
+            <h1>POZZYTRON</h1>
+            <p>Geleceği Kodluyoruz</p>
+        </div>
+    </header>
 
-    <!-- Main Content -->
-    <div class="container">
-        <div class="accent"></div>
-        <h1>Mobile App Solutions</h1>
-        <p>Providing secure and transparent digital advertising solutions. This domain is used to verify app ownership.</p>
-    </div>
+    <!-- Company Description -->
+    <section class="section about">
+        <div class="container">
+            <h2>Hakkımızda</h2>
+            <p>PozzyTron, yenilikçi yazılım çözümleri ve oyun geliştirme odaklı bir teknoloji girişimidir. Dijital dünyada kalıcı izler bırakmak için optimize edilmiş ve yüksek kaliteli deneyimler sunuyoruz.</p>
+        </div>
+    </section>
 
-    <script>
-        // Wait for the entire window (images, scripts, etc.) to load
-        window.addEventListener("load", () => {
-            const loader = document.getElementById("loader");
+    <!-- Projects Section -->
+    <section class="section projects">
+        <div class="container">
+            <h2 class="section-title">PROJELERİMİZ</h2>
             
-            // Small timeout so the user actually sees the smooth transition
-            setTimeout(() => {
-                loader.classList.add("loader-hidden");
-                document.body.style.overflow = "auto"; // Re-enable scrolling
-            }, 500); 
-        });
-    </script>
+            <div class="project-card">
+                <img src="axis-void-cover.jpg" alt="AxisVoid Kapak" class="project-img">
+                <h3>AxisVoid</h3>
+                <p>Yerçekimi odaklı, zihin zorlayan bir bulmaca deneyimi. Kendi sınırlarını keşfetmeye hazır mısın?</p>
+                
+                <div class="links">
+                    <a href="#" class="btn">Google Play</a>
+                    <a href="#" class="btn">App Store</a>
+                    <a href="#" class="btn outline">Detaylar</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 by PozzyTron</p>
+    </footer>
 
 </body>
 </html>

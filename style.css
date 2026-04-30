@@ -1,0 +1,100 @@
+/* Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Cover / Hero */
+.cover {
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('cover-bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.cover h1 {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+/* Bölümler */
+.section {
+    padding: 60px 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #00ffcc;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/* Proje Kartı */
+.project-card {
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Butonlar */
+.links {
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background: #00ffcc;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 1px solid #00ffcc;
+    color: #00ffcc;
+}
+
+/* Footer */
+footer {
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid #333;
+    font-size: 0.9rem;
+    color: #888;
+}
