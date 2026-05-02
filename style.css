@@ -163,9 +163,12 @@ footer {
 @media (max-width: 768px) {
     .cover {
         width: 100%; 
-        background-size: cover;
-        aspect-ratio: 4/1;
-        background-position: center center;
+        aspect-ratio: 4 / 1; 
+        height: auto; 
+        min-height: auto; 
+        background-size: contain; 
+        background-repeat: no-repeat;
+        background-position: center;
     }
 
     .container {
