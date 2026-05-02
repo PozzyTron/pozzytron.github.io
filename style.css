@@ -164,7 +164,7 @@ footer {
     .cover {
         width: 100%; 
         background-size: cover;
-        height: 50vw; 
+        aspect-ratio: 4/1;
         background-position: center center;
     }
 
