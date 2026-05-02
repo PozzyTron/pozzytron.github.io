@@ -161,6 +161,13 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .cover {
+        width: 100%; 
+        background-size: cover;
+        height: 50vw; 
+        background-position: center center;
+    }
+
     .container {
         width: 95%;
     }
