@@ -9,6 +9,12 @@
 </head>
 <body>
 
+    <!-- Yükleme Ekranı (Preloader) -->
+    <div id="loader">
+        <div class="spinner"></div>
+        <p>YÜKLENİYOR...</p>
+    </div>
+
     <!-- Header / Cover Section -->
     <header class="cover">
     </header>
@@ -16,33 +22,47 @@
     <!-- Company Description -->
     <section class="section about">
         <div class="container">
-            <h2>Hakkımızda</h2>
-            <p>PozzyTron, yenilikçi yazılım çözümleri ve oyun geliştirme odaklı bir teknoloji girişimidir. Dijital dünyada kalıcı izler bırakmak için optimize edilmiş ve yüksek kaliteli deneyimler sunuyoruz.</p>
+            <h2 class="section-title">HAKKIMIZDA</h2>
+            <p>Hayal etmek, hiç bu kadar gerçekçi olmamıştı. PozzyTron olarak her gün kendimizi daha ileriye taşıyor ve sizlere daha keyifli bir deneyim sunmak için çabalıyoruz. Windows, iOS ve Android platformları için oyunlar ve uygulamalar geliştiriyoruz.</p>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="section projects">
-        <div class="container">
-            <h2 class="section-title">PROJELERİMİZ</h2>
-            
-            <div class="project-card">
-                <img src="axis-void-cover.jpg" alt="AxisVoid Kapak" class="project-img">
-                <h3>AxisVoid</h3>
-                <p>Yerçekimi odaklı, zihin zorlayan bir bulmaca deneyimi. Kendi sınırlarını keşfetmeye hazır mısın?</p>
-                
-                <div class="links">
-                    <a href="https://play.google.com/store/apps/details?id=com.PozzyTron.AxisVoid" class="btn">Google Play</a>
-                    <a href="https://apps.apple.com/us/app/axis-void/id6761611674" class="btn">App Store</a>
-                </div>
-            </div>
+    <!-- Projeler Bölümü -->
+<section class="section projects">
+    <div class="container">
+        <h2 class="section-title">PROJELERİMİZ</h2>
+        
+        <div class="project-card">
+    <img src="axis-void-cover.png" alt="AxisVoid Kapak" class="project-img">
+    
+    <div class="project-content">
+        <div class="text-group">
+            <h3>AXIS VOID</h3>
+            <p>Yer çekimini kontrol et, cisimlerin içinden geç, zıpla, düş, sallan ve bulmacaları çöz! Bu platformer bir başka, detaylar mağaza sayfasında...</p>
         </div>
-    </section>
+        
+        <div class="links">
+            <a href="https://play.google.com/store/apps/details?id=com.PozzyTron.AxisVoid" class="btn" target="_blank" rel="noopener noreferrer">Google Play</a>
+            <a href="https://apps.apple.com/us/app/axis-void/id6761611674" class="btn" target="_blank" rel="noopener noreferrer">App Store</a>
+        </div>
+    </div>
+</div>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
         <p>© 2026 by PozzyTron</p>
     </footer>
+
+    <!-- Yükleme Ekranı Scripti -->
+    <script>
+        window.addEventListener("load", function () {
+            const loader = document.getElementById("loader");
+            // Sayfa tamamen yüklendiğinde loader'ı gizle
+            loader.classList.add("loader-hidden");
+        });
+    </script>
 
 </body>
 </html>
