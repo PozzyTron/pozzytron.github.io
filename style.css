@@ -67,12 +67,6 @@ body {
     text-align: center;
 }
 
-.container p {
-    overflow-wrap: break-word;
-    word-break: break-word;
-    max-width: 100%;
-}
-
 .cover {
     height: 400px;
     display: flex;
