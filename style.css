@@ -104,17 +104,12 @@ body {
     text-align: left;
 }
 
-.project-img {
-    width: 50%;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
 .project-video {
     width: 50%;
     aspect-ratio: 16 / 9;
     border-radius: 10px;
     overflow: hidden;
+    transform: translateZ(0);
 }
 
 .project-video iframe {
