@@ -1,68 +1,79 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PozzyTron | Ana Sayfa</title>
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PozzyTron | Ana Sayfa</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Yükleme Ekranı (Preloader) -->
-    <div id="loader">
-        <div class="spinner"></div>
-        <p>YÜKLENİYOR...</p>
-    </div>
+  <!-- Yükleme Ekranı (Preloader) -->
+  <div id="loader">
+    <div class="spinner"></div>
+    <p>YÜKLENİYOR...</p>
+  </div>
 
-    <!-- Header / Cover Section -->
-    <header class="cover">
-    </header>
+  <!-- Header / Cover Section -->
+  <header class="cover">
+  </header>
 
-    <!-- Company Description -->
-    <section class="section about">
-        <div class="container">
-            <h2 class="section-title">HAKKIMIZDA</h2>
-            <p>Hayal etmek, hiç bu kadar gerçekçi olmamıştı. PozzyTron olarak her gün kendimizi daha ileriye taşıyor ve sizlere daha keyifli bir deneyim sunmak için çabalıyoruz. Windows, iOS ve Android platformları için oyunlar ve uygulamalar geliştiriyoruz.</p>
-        </div>
-    </section>
-
-    <!-- Projeler Bölümü -->
-<section class="section projects">
+  <!-- Company Description -->
+  <section class="section about">
     <div class="container">
-        <h2 class="section-title">PROJELERİMİZ</h2>
-        
-        <div class="project-card">
-    <img src="axis-void-cover.png" alt="AxisVoid Kapak" class="project-img">
-    
-    <div class="project-content">
+      <h2 class="section-title">HAKKIMIZDA</h2>
+      <p>Hayal etmek, hiç bu kadar gerçekçi olmamıştı. PozzyTron olarak her gün kendimizi daha ileriye taşıyor ve sizlere daha keyifli bir deneyim sunmak için çabalıyoruz. Windows, iOS ve Android platformları için oyunlar ve uygulamalar geliştiriyoruz.</p>
+    </div>
+  </section>
+
+  <!-- Projeler Bölümü -->
+  <!-- Projeler Bölümü -->
+  <section class="section projects">
+    <div class="container">
+      <h2 class="section-title">PROJELERİMİZ</h2>
+
+      <div class="project-card">
+        <!-- Video Bölümü -->
+        <div class="project-video">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/RKN8dkt0n4E?si=FkeovWoNR1bqULzd"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <!-- İçerik Bölümü (Kartın içinde olmalı) -->
+      <div class="project-content">
         <div class="text-group">
-            <h3>AXIS VOID</h3>
-            <p>Yer çekimini kontrol et, cisimlerin içinden geç, zıpla, düş, sallan ve bulmacaları çöz! Bu platformer bir başka, detaylar mağaza sayfasında...</p>
+          <h3>AXIS VOID</h3>
+          <p>Yer çekimini kontrol et, cisimlerin içinden geç, zıpla, düş, sallan ve bulmacaları çöz! Bu platformer bir başka, detaylar mağaza sayfasında...</p>
         </div>
-        
+
         <div class="links">
-            <a href="https://play.google.com/store/apps/details?id=com.PozzyTron.AxisVoid" class="btn" target="_blank" rel="noopener noreferrer">Google Play</a>
-            <a href="https://apps.apple.com/us/app/axis-void/id6761611674" class="btn" target="_blank" rel="noopener noreferrer">App Store</a>
+          <a href="https://play.google.com/store/apps/details?id=com.PozzyTron.AxisVoid" class="btn" target="_blank" rel="noopener noreferrer">Google Play</a>
+          <a href="https://apps.apple.com/us/app/axis-void/id6761611674" class="btn" target="_blank" rel="noopener noreferrer">App Store</a>
         </div>
-    </div>
-</div>
-    </div>
+      </div>
+    </div> <!-- Kart burada kapanmalı -->
+  </div> <!-- Konteyner burada kapanmalı -->
 </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 by PozzyTron</p>
-    </footer>
+<!-- Footer -->
+<footer>
+  <p>© 2026 by PozzyTron</p>
+</footer>
 
-    <!-- Yükleme Ekranı Scripti -->
-    <script>
-        window.addEventListener("load", function () {
-            const loader = document.getElementById("loader");
-            // Sayfa tamamen yüklendiğinde loader'ı gizle
-            loader.classList.add("loader-hidden");
-        });
-    </script>
+<!-- Yükleme Ekranı Scripti -->
+<script>
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader");
+  // Sayfa tamamen yüklendiğinde loader'ı gizle
+  loader.classList.add("loader-hidden");
+});
+</script>
 
 </body>
 </html>
