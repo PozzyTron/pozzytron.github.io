@@ -171,12 +171,13 @@ footer {
 @media (max-width: 768px) {
     .cover {
         width: 100%;
-        aspect-ratio: 4 / 1;
+        aspect-ratio: 1;
         height: auto;
         min-height: auto;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+        background-image: url('mobile-bg.png');
     }
 
     .container {
