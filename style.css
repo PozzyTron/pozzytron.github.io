@@ -91,6 +91,12 @@ body {
     padding-bottom: 10px;
 }
 
+.section-about p {
+    overflow-wrap: break-word;
+    word-break: break-word;
+    max-width: 100%;
+}
+
 .project-card {
     background: #0f0f0f;
     padding: 40px;
