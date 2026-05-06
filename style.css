@@ -140,6 +140,11 @@ body {
     padding-top: 20px;
 }
 
+.links-secondary {
+    margin-top: 10px;
+    padding-top: 0;
+}
+
 .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -158,6 +163,25 @@ body {
     background-color: #00ffcc;
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 204, 255, 0.4);
+}
+
+/* Ghost / secondary button — less prominent */
+.btn-ghost {
+    display: inline-block;
+    padding: 6px 14px;
+    background-color: transparent;
+    color: #555555;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    border: 1px solid #2a2a2a;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-ghost:hover {
+    color: #aaaaaa;
+    border-color: #555555;
 }
 
 footer {
@@ -210,6 +234,10 @@ footer {
     .links {
         justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .links-secondary {
+        justify-content: center;
     }
 
     .section-title {
