@@ -89,13 +89,13 @@
       <li data-key="s1_li4">Reklamcılık amacıyla sınırlı cihaz tanımlayıcıları (reklam kimliği)</li>
     </ul>
 
-    <!-- Unity LevelPlay -->
-    <h2 data-key="s2_title">2. Reklamlar - Unity LevelPlay</h2>
+    <!-- Google AdMob -->
+    <h2 data-key="s2_title">2. Reklamlar - Google AdMob</h2>
     <p data-key="s2_text">
-      Uygulama, reklam gösterimi için <strong>Unity LevelPlay</strong> (eski adıyla IronSource) platformunu kullanır. Unity LevelPlay; reklam sunmak, performansını ölçmek ve hedeflemek amacıyla belirli veriler toplayabilir. Bu veriler Unity'nin gizlilik politikasına tabidir.
+      Uygulama, reklam gösterimi için <strong>Google AdMob</strong> platformunu kullanır. Google AdMob; reklam sunmak, performansını ölçmek ve hedeflemek amacıyla belirli veriler toplayabilir. Bu veriler Google'ın gizlilik politikasına tabidir.
     </p>
     <p style="margin-top:10px">
-      <a href="https://unity.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" data-key="s2_link">Unity Gizlilik Politikası →</a>
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" data-key="s2_link">Google Gizlilik Politikası →</a>
     </p>
     <p style="margin-top:12px" data-key="s2_opt">
       Kişiselleştirilmiş reklamları devre dışı bırakmak için cihazınızın reklam kimliğini sıfırlayabilir veya reklam takibini kısıtlayabilirsiniz (iOS Ayarları → Gizlilik → Apple Reklamcılığı / Android Ayarları → Google → Reklamlar).
@@ -141,9 +141,9 @@ const translations = {
     s1_li2: "Reklam etkileşim verileri (gösterim, tıklama)",
     s1_li3: "Çökme (crash) ve hata raporları",
     s1_li4: "Reklamcılık amacıyla sınırlı cihaz tanımlayıcıları (reklam kimliği)",
-    s2_title: "2. Reklamlar - Unity LevelPlay",
-    s2_text: "Uygulama, reklam gösterimi için Unity LevelPlay (eski adıyla IronSource) platformunu kullanır. Unity LevelPlay; reklam sunmak, performansını ölçmek ve hedeflemek amacıyla belirli veriler toplayabilir. Bu veriler Unity'nin gizlilik politikasına tabidir.",
-    s2_link: "Unity Gizlilik Politikası →",
+    s2_title: "2. Reklamlar - Google AdMob",
+    s2_text: "Uygulama, reklam gösterimi için Google AdMob platformunu kullanır. Google AdMob; reklam sunmak, performansını ölçmek ve hedeflemek amacıyla belirli veriler toplayabilir. Bu veriler Google'ın gizlilik politikasına tabidir.",
+    s2_link: "Google Gizlilik Politikası →",
     s2_opt: "Kişiselleştirilmiş reklamları devre dışı bırakmak için cihazınızın reklam kimliğini sıfırlayabilir veya reklam takibini kısıtlayabilirsiniz (iOS Ayarları → Gizlilik → Apple Reklamcılığı / Android Ayarları → Google → Reklamlar).",
     s3_title: "3. Çökme Raporlama - Debug Symbols",
     s3_text: "Uygulama stabilitesini iyileştirmek amacıyla Debug Symbols entegrasyonu kullanılmaktadır. Bu araç; uygulamanın çökmesi durumunda otomatik olarak anonim hata ve yığın izi (stack trace) raporları oluşturur. Bu raporlar sizi kişisel olarak tanımlamaz; yalnızca hangi kod satırında hata oluştuğunu tespit etmemize yarar.",
@@ -166,9 +166,9 @@ const translations = {
     s1_li2: "Ad interaction data (impressions, clicks)",
     s1_li3: "Crash and error reports",
     s1_li4: "Limited device identifiers for advertising purposes (advertising ID)",
-    s2_title: "2. Advertising - Unity LevelPlay",
-    s2_text: "The app uses Unity LevelPlay (formerly IronSource) for ad delivery. Unity LevelPlay may collect certain data to serve, measure, and target ads. This data is subject to Unity's privacy policy.",
-    s2_link: "Unity Privacy Policy →",
+    s2_title: "2. Advertising - Google AdMob",
+    s2_text: "The app uses Google AdMob for ad delivery. Google AdMob may collect certain data to serve, measure, and target ads. This data is subject to Google's privacy policy.",
+    s2_link: "Google Privacy Policy →",
     s2_opt: "To opt out of personalized ads, you can reset your device's advertising ID or limit ad tracking (iOS Settings → Privacy → Apple Advertising / Android Settings → Google → Ads).",
     s3_title: "3. Crash Reporting - Debug Symbols",
     s3_text: "Debug Symbols integration is used to improve app stability. In the event of a crash, this tool automatically generates anonymous error and stack trace reports. These reports do not personally identify you - they only help us pinpoint which line of code caused the issue.",
@@ -196,7 +196,7 @@ if (introEl) {
 const s2El = document.querySelector("[data-key='s2_text']");
 if (s2El) {
   s2El.innerHTML = translations[lang].s2_text.replace(
-    "Unity LevelPlay", "<strong>Unity LevelPlay</strong>"
+    "Google AdMob", "<strong>Google AdMob</strong>"
   );
 }
 
