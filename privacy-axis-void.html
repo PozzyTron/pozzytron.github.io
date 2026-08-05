@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PozzyTron</title>
+  <title>Axis Void - Gizlilik Politikası | PozzyTron</title>
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="stylesheet" href="style.css">
+
   <style>
     .privacy-wrap {
       max-width: 800px;
@@ -13,36 +14,51 @@
       padding: 60px 20px 80px;
       text-align: left;
     }
+
+    .privacy-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
     .privacy-wrap h1 {
       margin-top: 20px;
       font-size: 2rem;
       color: #00ccff;
       margin-bottom: 40px;
     }
+
     .privacy-wrap h2 {
       font-size: 1.2rem;
       color: #00ccff;
       margin: 36px 0 10px;
     }
-    .privacy-wrap p, .privacy-wrap li {
+
+    .privacy-wrap p,
+    .privacy-wrap li {
       color: #cccccc;
       font-size: 1rem;
       line-height: 1.8;
     }
+
     .privacy-wrap ul {
       padding-left: 20px;
       margin-top: 8px;
     }
+
     .privacy-wrap a {
       color: #00ccff;
       text-decoration: none;
     }
+
     .privacy-wrap a:hover {
       text-decoration: underline;
     }
+
     .back-btn {
       display: inline-block;
-      margin-bottom: 40px;
       color: #888;
       font-size: 0.95rem;
       text-decoration: none;
@@ -51,177 +67,383 @@
       border-radius: 6px;
       transition: all 0.2s ease;
     }
+
     .back-btn:hover {
       color: #fff;
       border-color: #666;
+      text-decoration: none;
     }
+
+    .language-switch {
+      display: inline-flex;
+      overflow: hidden;
+      border: 1px solid #333;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .language-switch button {
+      appearance: none;
+      border: 0;
+      background: transparent;
+      color: #888;
+      padding: 8px 12px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.9rem;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    .language-switch button + button {
+      border-left: 1px solid #333;
+    }
+
+    .language-switch button:hover {
+      color: #fff;
+    }
+
+    .language-switch button.active {
+      color: #111;
+      background: #00ccff;
+    }
+
     .updated {
       color: #555;
       font-size: 0.9rem;
       margin-top: 8px;
     }
+
+    @media (max-width: 560px) {
+      .privacy-wrap {
+        padding-top: 32px;
+      }
+
+      .privacy-header {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .back-btn {
+        align-self: flex-start;
+      }
+
+      .language-switch {
+        align-self: flex-start;
+      }
+
+      .privacy-wrap h1 {
+        font-size: 1.6rem;
+      }
+    }
   </style>
 </head>
-<body>
 
+<body>
   <div id="loader">
     <div class="spinner"></div>
     <p data-key="loader">YÜKLENİYOR...</p>
   </div>
 
-  <div class="privacy-wrap">
-    <a href="index.html" class="back-btn" data-key="back">← Ana Sayfa</a>
+  <main class="privacy-wrap">
+    <div class="privacy-header">
+      <a href="index.html" class="back-btn" data-key="back">← Ana Sayfa</a>
+
+      <div class="language-switch" aria-label="Language">
+        <button type="button" data-lang="tr">TR</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+    </div>
 
     <h1 data-key="page_title">AXIS VOID | GİZLİLİK POLİTİKASI</h1>
-    <p class="updated" data-key="updated">Son güncelleme: Mayıs 2026</p>
+    <p class="updated" data-key="updated">Son güncelleme: 5 Ağustos 2026</p>
 
     <p style="margin-top:24px" data-key="intro">
-      Bu gizlilik politikası, PozzyTron tarafından geliştirilen <strong>Axis Void</strong> mobil uygulamasının kişisel verilerinizi nasıl ele aldığını açıklar. Uygulamayı kullanarak bu politikayı kabul etmiş sayılırsınız.
+      PozzyTron tarafından geliştirilen AXIS VOID, reklam destekli bir mobil oyundur. Bu Gizlilik Politikası, oyunu kullandığınız sırada hangi bilgilerin işlenebileceğini ve bu bilgilerin nasıl kullanıldığını açıklar.
     </p>
 
-    <!-- Veri Toplama -->
-    <h2 data-key="s1_title">1. Toplanan Veriler</h2>
-    <p data-key="s1_text">Axis Void, sizden doğrudan herhangi bir kişisel veri toplamaz. Ancak üçüncü taraf SDK'lar aracılığıyla aşağıdaki teknik veriler toplanabilir:</p>
+    <h2 data-key="s1_title">1. Toplanan Bilgiler</h2>
+
+    <p data-key="s1_text">
+      PozzyTron, AXIS VOID üzerinden kullanıcıların ad, e-posta adresi, telefon numarası veya açık adresi gibi doğrudan kimlik belirleyici bilgilerini kendisi toplamaz.
+    </p>
+
+    <p data-key="s1_sdk_text">
+      Ancak oyunda reklam göstermek, reklam performansını ölçmek, sahtekârlığı önlemek ve hizmetlerin düzgün çalışmasını sağlamak amacıyla Unity LevelPlay kullanılmaktadır. Unity LevelPlay veya onun üzerinden reklam sunan reklam ağları aşağıdaki bilgileri otomatik olarak işleyebilir:
+    </p>
+
     <ul>
-      <li data-key="s1_li1">Cihaz tipi, işletim sistemi sürümü ve dil ayarı</li>
-      <li data-key="s1_li2">Reklam etkileşim verileri (gösterim, tıklama)</li>
-      <li data-key="s1_li3">Çökme (crash) ve hata raporları</li>
-      <li data-key="s1_li4">Reklamcılık amacıyla sınırlı cihaz tanımlayıcıları (reklam kimliği)</li>
+      <li data-key="s1_li1">Reklam kimliği gibi cihaz tanımlayıcıları</li>
+      <li data-key="s1_li2">IP adresi ve yaklaşık konum bilgisi</li>
+      <li data-key="s1_li3">Cihaz modeli, üreticisi ve işletim sistemi sürümü</li>
+      <li data-key="s1_li4">Uygulama ve cihaz dili</li>
+      <li data-key="s1_li5">Reklam görüntüleme, tıklama ve etkileşim bilgileri</li>
+      <li data-key="s1_li6">Uygulama kullanımı ve teknik hata bilgileri</li>
+      <li data-key="s1_li7">Sahtekârlık ve güvenlik kontrolleri için gerekli teknik veriler</li>
     </ul>
 
-    <!-- Google AdMob -->
-    <h2 data-key="s2_title">2. Reklamlar - Google AdMob</h2>
+    <h2 data-key="s2_title">2. Reklamlar ve Unity LevelPlay</h2>
+
     <p data-key="s2_text">
-      Uygulama, reklam gösterimi için <strong>Google AdMob</strong> platformunu kullanır. Google AdMob; reklam sunmak, performansını ölçmek ve hedeflemek amacıyla belirli veriler toplayabilir. Bu veriler Google'ın gizlilik politikasına tabidir.
+      AXIS VOID, reklamların gösterilmesi ve yönetilmesi için Unity LevelPlay reklam aracılık hizmetini kullanır. LevelPlay, reklamların Unity Ads veya LevelPlay panelinde etkinleştirilen diğer reklam ağları üzerinden sunulmasını sağlayabilir.
     </p>
+
+    <p data-key="s2_detail">
+      Bu reklam sağlayıcıları, kullanıcıya daha uygun reklamlar göstermek, reklamların performansını ölçmek, aynı reklamın aşırı gösterilmesini önlemek ve geçersiz reklam faaliyetlerini tespit etmek amacıyla cihaz bilgilerini ve reklam kimliklerini kullanabilir.
+    </p>
+
+    <p data-key="s2_more">
+      Unity'nin kullanıcı verilerini nasıl işlediği hakkında daha fazla bilgi için:
+    </p>
+
     <p style="margin-top:10px">
-      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" data-key="s2_link">Google Gizlilik Politikası →</a>
-    </p>
-    <p style="margin-top:12px" data-key="s2_opt">
-      Kişiselleştirilmiş reklamları devre dışı bırakmak için cihazınızın reklam kimliğini sıfırlayabilir veya reklam takibini kısıtlayabilirsiniz (iOS Ayarları → Gizlilik → Apple Reklamcılığı / Android Ayarları → Google → Reklamlar).
+      <a
+        href="https://unity.com/legal/game-player-and-app-user-privacy-policy"
+        target="_blank"
+        rel="noopener noreferrer"
+        data-key="s2_link"
+      >Unity Game Player and App User Privacy Policy →</a>
     </p>
 
-    <!-- Debug Symbols / Crash Reporting -->
-    <h2 data-key="s3_title">3. Çökme Raporlama - Debug Symbols</h2>
+    <h2 data-key="s3_title">3. Kişiselleştirilmiş Reklamlar ve Kullanıcı Tercihleri</h2>
+
     <p data-key="s3_text">
-      Uygulama stabilitesini iyileştirmek amacıyla <strong>Debug Symbols</strong> entegrasyonu kullanılmaktadır. Bu araç; uygulamanın çökmesi durumunda otomatik olarak anonim hata ve yığın izi (stack trace) raporları oluşturur. Bu raporlar sizi kişisel olarak tanımlamaz; yalnızca hangi kod satırında hata oluştuğunu tespit etmemize yarar.
+      Bulunduğunuz ülkeye, cihaz ayarlarınıza ve verdiğiniz izinlere bağlı olarak kişiselleştirilmiş veya kişiselleştirilmemiş reklamlar gösterilebilir.
     </p>
 
-    <!-- Veri Paylaşımı -->
-    <h2 data-key="s4_title">4. Veri Paylaşımı</h2>
-    <p data-key="s4_text">PozzyTron, verilerinizi üçüncü taraflara satmaz veya kiralamaz. Veriler yalnızca yukarıda belirtilen SDK'ların kendi politikaları çerçevesinde işlenebilir.</p>
+    <p data-key="s3_android">
+      Android cihazlarda reklam kişiselleştirme tercihlerinizi cihazınızın gizlilik veya reklam ayarları üzerinden değiştirebilir ve reklam kimliğinizi sıfırlayabilir ya da silebilirsiniz.
+    </p>
 
-    <!-- Çocuk Gizliliği -->
-    <h2 data-key="s5_title">5. Çocuk Gizliliği</h2>
-    <p data-key="s5_text">Axis Void, 13 yaşın altındaki çocuklardan bilerek kişisel veri toplamaz. Ebeveynler, çocuklarına ait olası bir veri kaydından şüpheleniyorlarsa bizimle iletişime geçebilirler.</p>
+    <p data-key="s3_ios">
+      iOS cihazlarda uygulamaların sizi diğer uygulamalar ve internet siteleri arasında takip etmesine izin verip vermeyeceğinizi cihazınızın Gizlilik ve Güvenlik ayarlarından yönetebilirsiniz.
+    </p>
 
-    <!-- İletişim -->
-    <h2 data-key="s6_title">6. İletişim</h2>
-    <p data-key="s6_text">Bu politikayla ilgili sorularınız için:</p>
+    <h2 data-key="s4_title">4. Bilgilerin Kullanım Amaçları</h2>
+
+    <p data-key="s4_text">İşlenen bilgiler şu amaçlarla kullanılabilir:</p>
+
+    <ul>
+      <li data-key="s4_li1">Reklam göstermek ve reklam teslimatını yönetmek</li>
+      <li data-key="s4_li2">Reklam performansını ve etkileşimlerini ölçmek</li>
+      <li data-key="s4_li3">Ödüllü reklamların tamamlandığını doğrulamak</li>
+      <li data-key="s4_li4">Teknik sorunları tespit etmek</li>
+      <li data-key="s4_li5">Sahtekârlığı, kötüye kullanımı ve güvenlik tehditlerini önlemek</li>
+      <li data-key="s4_li6">Yasal yükümlülükleri yerine getirmek</li>
+    </ul>
+
+    <h2 data-key="s5_title">5. Bilgilerin Paylaşılması</h2>
+
+    <p data-key="s5_text">
+      Reklam gösterimi için gerekli bilgiler Unity LevelPlay, Unity ve LevelPlay üzerinden etkinleştirilen reklam sağlayıcıları tarafından işlenebilir. PozzyTron, kullanıcıların kişisel bilgilerini bağımsız olarak satmaz.
+    </p>
+
+    <p data-key="s5_detail">
+      Üçüncü taraf reklam sağlayıcılarının verileri işlemesi kendi gizlilik politikalarına tabidir.
+    </p>
+
+    <h2 data-key="s6_title">6. Veri Saklama ve Güvenlik</h2>
+
+    <p data-key="s6_text">
+      PozzyTron, AXIS VOID içerisinde kullanıcı hesabı oluşturmaz ve kullanıcıların doğrudan kimlik belirleyici bilgilerini kendi sunucularında saklamaz. Unity ve reklam sağlayıcıları tarafından işlenen bilgilerin saklama süreleri ilgili hizmet sağlayıcının politikasına ve geçerli yasalara göre değişebilir.
+    </p>
+
+    <h2 data-key="s7_title">7. Çocukların Gizliliği</h2>
+
+    <p data-key="s7_text">
+      AXIS VOID özellikle 13 yaşın altındaki çocuklara yönelik olarak tasarlanmamıştır. Kullanıcının bulunduğu ülkede geçerli olan dijital rıza yaşı daha yüksekse ilgili yaş sınırı uygulanır.
+    </p>
+
+    <p data-key="s7_detail">
+      Oyunun çocuklara yönelik olarak dağıtıldığı bir mağaza veya bölgede, reklamların ve veri işlemenin ilgili çocuk gizliliği kurallarına uygun şekilde yapılandırılması amaçlanır.
+    </p>
+
+    <h2 data-key="s8_title">8. Kullanıcı Hakları</h2>
+
+    <p data-key="s8_text">
+      Bulunduğunuz ülkenin yasalarına bağlı olarak kişisel verilerinize erişme, düzeltilmesini veya silinmesini isteme, veri işlemeye itiraz etme ya da verilen izni geri çekme gibi haklara sahip olabilirsiniz.
+    </p>
+
+    <p data-key="s8_detail">
+      Unity tarafından işlenen verilerle ilgili talepler için Unity'nin gizlilik sayfasındaki başvuru yöntemlerini kullanabilirsiniz. PozzyTron ile ilgili talepler için aşağıdaki iletişim adresinden bize ulaşabilirsiniz.
+    </p>
+
+    <h2 data-key="s9_title">9. Gizlilik Politikasındaki Değişiklikler</h2>
+
+    <p data-key="s9_text">
+      Bu Gizlilik Politikası; oyunda kullanılan hizmetlerin, reklam ağlarının veya yasal gerekliliklerin değişmesi halinde güncellenebilir. Güncel sürüm her zaman bu sayfada yayımlanır.
+    </p>
+
+    <h2 data-key="s10_title">10. İletişim</h2>
+
+    <p data-key="s10_text">Bu Gizlilik Politikası hakkında sorularınız için:</p>
+
     <p style="margin-top:8px">
+      <strong>PozzyTron</strong><br>
       <a href="mailto:gultekinyusufselim@gmail.com">gultekinyusufselim@gmail.com</a>
     </p>
-  </div>
+  </main>
 
   <footer>
     <p>© 2026 by PozzyTron</p>
   </footer>
 
-<script>
-const translations = {
-  tr: {
-    loader: "YÜKLENİYOR...",
-    back: "← Ana Sayfa",
-    page_title: "AXIS VOID | GİZLİLİK POLİTİKASI",
-    updated: "Son güncelleme: Mayıs 2026",
-    intro: "Bu gizlilik politikası, PozzyTron tarafından geliştirilen Axis Void mobil uygulamasının kişisel verilerinizi nasıl ele aldığını açıklar. Uygulamayı kullanarak bu politikayı kabul etmiş sayılırsınız.",
-    s1_title: "1. Toplanan Veriler",
-    s1_text: "Axis Void, sizden doğrudan herhangi bir kişisel veri toplamaz. Ancak üçüncü taraf SDK'lar aracılığıyla aşağıdaki teknik veriler toplanabilir:",
-    s1_li1: "Cihaz tipi, işletim sistemi sürümü ve dil ayarı",
-    s1_li2: "Reklam etkileşim verileri (gösterim, tıklama)",
-    s1_li3: "Çökme (crash) ve hata raporları",
-    s1_li4: "Reklamcılık amacıyla sınırlı cihaz tanımlayıcıları (reklam kimliği)",
-    s2_title: "2. Reklamlar - Google AdMob",
-    s2_text: "Uygulama, reklam gösterimi için Google AdMob platformunu kullanır. Google AdMob; reklam sunmak, performansını ölçmek ve hedeflemek amacıyla belirli veriler toplayabilir. Bu veriler Google'ın gizlilik politikasına tabidir.",
-    s2_link: "Google Gizlilik Politikası →",
-    s2_opt: "Kişiselleştirilmiş reklamları devre dışı bırakmak için cihazınızın reklam kimliğini sıfırlayabilir veya reklam takibini kısıtlayabilirsiniz (iOS Ayarları → Gizlilik → Apple Reklamcılığı / Android Ayarları → Google → Reklamlar).",
-    s3_title: "3. Çökme Raporlama - Debug Symbols",
-    s3_text: "Uygulama stabilitesini iyileştirmek amacıyla Debug Symbols entegrasyonu kullanılmaktadır. Bu araç; uygulamanın çökmesi durumunda otomatik olarak anonim hata ve yığın izi (stack trace) raporları oluşturur. Bu raporlar sizi kişisel olarak tanımlamaz; yalnızca hangi kod satırında hata oluştuğunu tespit etmemize yarar.",
-    s4_title: "4. Veri Paylaşımı",
-    s4_text: "PozzyTron, verilerinizi üçüncü taraflara satmaz veya kiralamaz. Veriler yalnızca yukarıda belirtilen SDK'ların kendi politikaları çerçevesinde işlenebilir.",
-    s5_title: "5. Çocuk Gizliliği",
-    s5_text: "Axis Void, 13 yaşın altındaki çocuklardan bilerek kişisel veri toplamaz. Ebeveynler, çocuklarına ait olası bir veri kaydından şüpheleniyorlarsa bizimle iletişime geçebilirler.",
-    s6_title: "6. İletişim",
-    s6_text: "Bu politikayla ilgili sorularınız için:"
-  },
-  en: {
-    loader: "LOADING...",
-    back: "← Home",
-    page_title: "AXIS VOID | PRIVACY POLICY",
-    updated: "Last updated: May 2026",
-    intro: "This privacy policy describes how Axis Void, developed by PozzyTron, handles your personal data. By using the app, you agree to this policy.",
-    s1_title: "1. Data Collected",
-    s1_text: "Axis Void does not directly collect any personal data from you. However, the following technical data may be collected through third-party SDKs:",
-    s1_li1: "Device type, operating system version, and language setting",
-    s1_li2: "Ad interaction data (impressions, clicks)",
-    s1_li3: "Crash and error reports",
-    s1_li4: "Limited device identifiers for advertising purposes (advertising ID)",
-    s2_title: "2. Advertising - Google AdMob",
-    s2_text: "The app uses Google AdMob for ad delivery. Google AdMob may collect certain data to serve, measure, and target ads. This data is subject to Google's privacy policy.",
-    s2_link: "Google Privacy Policy →",
-    s2_opt: "To opt out of personalized ads, you can reset your device's advertising ID or limit ad tracking (iOS Settings → Privacy → Apple Advertising / Android Settings → Google → Ads).",
-    s3_title: "3. Crash Reporting - Debug Symbols",
-    s3_text: "Debug Symbols integration is used to improve app stability. In the event of a crash, this tool automatically generates anonymous error and stack trace reports. These reports do not personally identify you - they only help us pinpoint which line of code caused the issue.",
-    s4_title: "4. Data Sharing",
-    s4_text: "PozzyTron does not sell or rent your data to third parties. Data may only be processed within the policies of the SDKs mentioned above.",
-    s5_title: "5. Children's Privacy",
-    s5_text: "Axis Void does not knowingly collect personal data from children under 13. If a parent suspects data has been collected about their child, they may contact us.",
-    s6_title: "6. Contact",
-    s6_text: "For questions about this policy:"
-  }
-};
+  <script>
+    const translations = {
+      tr: {
+        loader: "YÜKLENİYOR...",
+        back: "← Ana Sayfa",
+        page_title: "AXIS VOID | GİZLİLİK POLİTİKASI",
+        updated: "Son güncelleme: 5 Ağustos 2026",
+        intro: "PozzyTron tarafından geliştirilen AXIS VOID, reklam destekli bir mobil oyundur. Bu Gizlilik Politikası, oyunu kullandığınız sırada hangi bilgilerin işlenebileceğini ve bu bilgilerin nasıl kullanıldığını açıklar.",
+        s1_title: "1. Toplanan Bilgiler",
+        s1_text: "PozzyTron, AXIS VOID üzerinden kullanıcıların ad, e-posta adresi, telefon numarası veya açık adresi gibi doğrudan kimlik belirleyici bilgilerini kendisi toplamaz.",
+        s1_sdk_text: "Ancak oyunda reklam göstermek, reklam performansını ölçmek, sahtekârlığı önlemek ve hizmetlerin düzgün çalışmasını sağlamak amacıyla Unity LevelPlay kullanılmaktadır. Unity LevelPlay veya onun üzerinden reklam sunan reklam ağları aşağıdaki bilgileri otomatik olarak işleyebilir:",
+        s1_li1: "Reklam kimliği gibi cihaz tanımlayıcıları",
+        s1_li2: "IP adresi ve yaklaşık konum bilgisi",
+        s1_li3: "Cihaz modeli, üreticisi ve işletim sistemi sürümü",
+        s1_li4: "Uygulama ve cihaz dili",
+        s1_li5: "Reklam görüntüleme, tıklama ve etkileşim bilgileri",
+        s1_li6: "Uygulama kullanımı ve teknik hata bilgileri",
+        s1_li7: "Sahtekârlık ve güvenlik kontrolleri için gerekli teknik veriler",
+        s2_title: "2. Reklamlar ve Unity LevelPlay",
+        s2_text: "AXIS VOID, reklamların gösterilmesi ve yönetilmesi için Unity LevelPlay reklam aracılık hizmetini kullanır. LevelPlay, reklamların Unity Ads veya LevelPlay panelinde etkinleştirilen diğer reklam ağları üzerinden sunulmasını sağlayabilir.",
+        s2_detail: "Bu reklam sağlayıcıları, kullanıcıya daha uygun reklamlar göstermek, reklamların performansını ölçmek, aynı reklamın aşırı gösterilmesini önlemek ve geçersiz reklam faaliyetlerini tespit etmek amacıyla cihaz bilgilerini ve reklam kimliklerini kullanabilir.",
+        s2_more: "Unity'nin kullanıcı verilerini nasıl işlediği hakkında daha fazla bilgi için:",
+        s2_link: "Unity Game Player and App User Privacy Policy →",
+        s3_title: "3. Kişiselleştirilmiş Reklamlar ve Kullanıcı Tercihleri",
+        s3_text: "Bulunduğunuz ülkeye, cihaz ayarlarınıza ve verdiğiniz izinlere bağlı olarak kişiselleştirilmiş veya kişiselleştirilmemiş reklamlar gösterilebilir.",
+        s3_android: "Android cihazlarda reklam kişiselleştirme tercihlerinizi cihazınızın gizlilik veya reklam ayarları üzerinden değiştirebilir ve reklam kimliğinizi sıfırlayabilir ya da silebilirsiniz.",
+        s3_ios: "iOS cihazlarda uygulamaların sizi diğer uygulamalar ve internet siteleri arasında takip etmesine izin verip vermeyeceğinizi cihazınızın Gizlilik ve Güvenlik ayarlarından yönetebilirsiniz.",
+        s4_title: "4. Bilgilerin Kullanım Amaçları",
+        s4_text: "İşlenen bilgiler şu amaçlarla kullanılabilir:",
+        s4_li1: "Reklam göstermek ve reklam teslimatını yönetmek",
+        s4_li2: "Reklam performansını ve etkileşimlerini ölçmek",
+        s4_li3: "Ödüllü reklamların tamamlandığını doğrulamak",
+        s4_li4: "Teknik sorunları tespit etmek",
+        s4_li5: "Sahtekârlığı, kötüye kullanımı ve güvenlik tehditlerini önlemek",
+        s4_li6: "Yasal yükümlülükleri yerine getirmek",
+        s5_title: "5. Bilgilerin Paylaşılması",
+        s5_text: "Reklam gösterimi için gerekli bilgiler Unity LevelPlay, Unity ve LevelPlay üzerinden etkinleştirilen reklam sağlayıcıları tarafından işlenebilir. PozzyTron, kullanıcıların kişisel bilgilerini bağımsız olarak satmaz.",
+        s5_detail: "Üçüncü taraf reklam sağlayıcılarının verileri işlemesi kendi gizlilik politikalarına tabidir.",
+        s6_title: "6. Veri Saklama ve Güvenlik",
+        s6_text: "PozzyTron, AXIS VOID içerisinde kullanıcı hesabı oluşturmaz ve kullanıcıların doğrudan kimlik belirleyici bilgilerini kendi sunucularında saklamaz. Unity ve reklam sağlayıcıları tarafından işlenen bilgilerin saklama süreleri ilgili hizmet sağlayıcının politikasına ve geçerli yasalara göre değişebilir.",
+        s7_title: "7. Çocukların Gizliliği",
+        s7_text: "AXIS VOID özellikle 13 yaşın altındaki çocuklara yönelik olarak tasarlanmamıştır. Kullanıcının bulunduğu ülkede geçerli olan dijital rıza yaşı daha yüksekse ilgili yaş sınırı uygulanır.",
+        s7_detail: "Oyunun çocuklara yönelik olarak dağıtıldığı bir mağaza veya bölgede, reklamların ve veri işlemenin ilgili çocuk gizliliği kurallarına uygun şekilde yapılandırılması amaçlanır.",
+        s8_title: "8. Kullanıcı Hakları",
+        s8_text: "Bulunduğunuz ülkenin yasalarına bağlı olarak kişisel verilerinize erişme, düzeltilmesini veya silinmesini isteme, veri işlemeye itiraz etme ya da verilen izni geri çekme gibi haklara sahip olabilirsiniz.",
+        s8_detail: "Unity tarafından işlenen verilerle ilgili talepler için Unity'nin gizlilik sayfasındaki başvuru yöntemlerini kullanabilirsiniz. PozzyTron ile ilgili talepler için aşağıdaki iletişim adresinden bize ulaşabilirsiniz.",
+        s9_title: "9. Gizlilik Politikasındaki Değişiklikler",
+        s9_text: "Bu Gizlilik Politikası; oyunda kullanılan hizmetlerin, reklam ağlarının veya yasal gerekliliklerin değişmesi halinde güncellenebilir. Güncel sürüm her zaman bu sayfada yayımlanır.",
+        s10_title: "10. İletişim",
+        s10_text: "Bu Gizlilik Politikası hakkında sorularınız için:"
+      },
 
-const lang = navigator.language.startsWith("tr") ? "tr" : "en";
+      en: {
+        loader: "LOADING...",
+        back: "← Home",
+        page_title: "AXIS VOID | PRIVACY POLICY",
+        updated: "Last updated: August 5, 2026",
+        intro: "AXIS VOID, developed by PozzyTron, is an ad-supported mobile game. This Privacy Policy explains what information may be processed while you use the game and how that information may be used.",
+        s1_title: "1. Information Collected",
+        s1_text: "PozzyTron does not directly collect personally identifying information such as users' names, email addresses, phone numbers, or physical addresses through AXIS VOID.",
+        s1_sdk_text: "However, Unity LevelPlay is used to display ads, measure advertising performance, prevent fraud, and ensure that services operate properly. Unity LevelPlay or advertising networks serving ads through it may automatically process the following information:",
+        s1_li1: "Device identifiers such as the advertising ID",
+        s1_li2: "IP address and approximate location",
+        s1_li3: "Device model, manufacturer, and operating system version",
+        s1_li4: "Application and device language",
+        s1_li5: "Ad impression, click, and interaction information",
+        s1_li6: "Application usage and technical error information",
+        s1_li7: "Technical data required for fraud prevention and security checks",
+        s2_title: "2. Advertising and Unity LevelPlay",
+        s2_text: "AXIS VOID uses the Unity LevelPlay advertising mediation service to display and manage advertisements. LevelPlay may serve advertisements through Unity Ads or other advertising networks enabled in the LevelPlay dashboard.",
+        s2_detail: "These advertising providers may use device information and advertising identifiers to show more relevant ads, measure advertising performance, prevent excessive repetition of the same advertisement, and detect invalid advertising activity.",
+        s2_more: "For more information about how Unity processes user data:",
+        s2_link: "Unity Game Player and App User Privacy Policy →",
+        s3_title: "3. Personalized Ads and User Choices",
+        s3_text: "Depending on your country, device settings, and permissions, personalized or non-personalized advertisements may be displayed.",
+        s3_android: "On Android devices, you may change advertising personalization preferences through your device's privacy or advertising settings and may reset or delete your advertising ID.",
+        s3_ios: "On iOS devices, you may manage whether applications are allowed to track you across other applications and websites through your device's Privacy & Security settings.",
+        s4_title: "4. Purposes of Processing",
+        s4_text: "Processed information may be used for the following purposes:",
+        s4_li1: "Displaying advertisements and managing ad delivery",
+        s4_li2: "Measuring advertising performance and interactions",
+        s4_li3: "Verifying completion of rewarded advertisements",
+        s4_li4: "Detecting technical problems",
+        s4_li5: "Preventing fraud, misuse, and security threats",
+        s4_li6: "Complying with legal obligations",
+        s5_title: "5. Sharing of Information",
+        s5_text: "Information required for advertising may be processed by Unity LevelPlay, Unity, and advertising providers enabled through LevelPlay. PozzyTron does not independently sell users' personal information.",
+        s5_detail: "The processing of data by third-party advertising providers is subject to their own privacy policies.",
+        s6_title: "6. Data Retention and Security",
+        s6_text: "PozzyTron does not create user accounts within AXIS VOID and does not store users' directly identifying information on its own servers. Retention periods for information processed by Unity and advertising providers may vary according to the relevant provider's policies and applicable law.",
+        s7_title: "7. Children's Privacy",
+        s7_text: "AXIS VOID is not specifically designed for children under the age of 13. Where the applicable age of digital consent in a user's country is higher, the relevant age threshold applies.",
+        s7_detail: "Where the game is distributed in a store or region as being directed toward children, advertising and data processing are intended to be configured in accordance with the applicable children's privacy rules.",
+        s8_title: "8. User Rights",
+        s8_text: "Depending on the laws of your country, you may have rights such as accessing your personal data, requesting its correction or deletion, objecting to processing, or withdrawing consent.",
+        s8_detail: "For requests concerning data processed by Unity, you may use the request methods described on Unity's privacy pages. For matters concerning PozzyTron, you may contact us using the address below.",
+        s9_title: "9. Changes to This Privacy Policy",
+        s9_text: "This Privacy Policy may be updated if the services or advertising networks used by the game or the applicable legal requirements change. The current version will always be published on this page.",
+        s10_title: "10. Contact",
+        s10_text: "For questions about this Privacy Policy:"
+      }
+    };
 
-// intro tag has <strong> inside, handle separately
-const introEl = document.querySelector("[data-key='intro']");
-if (introEl) {
-  const gameName = lang === "tr" ? "Axis Void" : "Axis Void";
-  introEl.innerHTML = translations[lang].intro.replace(
-    gameName, `<strong>${gameName}</strong>`
-  );
-}
+    const supportedLanguages = ["tr", "en"];
 
-// s2_text has <strong> inside
-const s2El = document.querySelector("[data-key='s2_text']");
-if (s2El) {
-  s2El.innerHTML = translations[lang].s2_text.replace(
-    "Google AdMob", "<strong>Google AdMob</strong>"
-  );
-}
+    function getInitialLanguage() {
+      const savedLanguage = localStorage.getItem("pozzytron-language");
 
-// s3_text has <strong> inside
-const s3El = document.querySelector("[data-key='s3_text']");
-if (s3El) {
-  s3El.innerHTML = translations[lang].s3_text.replace(
-    "Debug Symbols", "<strong>Debug Symbols</strong>"
-  );
-}
+      if (supportedLanguages.includes(savedLanguage)) {
+        return savedLanguage;
+      }
 
-document.querySelectorAll("[data-key]").forEach(el => {
-  const key = el.getAttribute("data-key");
-  if (["intro", "s2_text", "s3_text"].includes(key)) return; // already handled
-  if (translations[lang][key]) el.textContent = translations[lang][key];
-});
+      return navigator.language.toLowerCase().startsWith("tr") ? "tr" : "en";
+    }
 
-document.title = lang === "tr"
-  ? "Axis Void - Gizlilik Politikası | PozzyTron"
-  : "Axis Void - Privacy Policy | PozzyTron";
+    function setLanguage(language) {
+      const selectedLanguage = supportedLanguages.includes(language) ? language : "en";
+      const dictionary = translations[selectedLanguage];
 
-window.addEventListener("load", function () {
-  document.getElementById("loader").classList.add("loader-hidden");
-});
-</script>
+      document.documentElement.lang = selectedLanguage;
 
+      document.querySelectorAll("[data-key]").forEach((element) => {
+        const key = element.dataset.key;
+
+        if (dictionary[key]) {
+          element.textContent = dictionary[key];
+        }
+      });
+
+      document.title = selectedLanguage === "tr"
+        ? "Axis Void - Gizlilik Politikası | PozzyTron"
+        : "Axis Void - Privacy Policy | PozzyTron";
+
+      document.querySelectorAll("[data-lang]").forEach((button) => {
+        const isActive = button.dataset.lang === selectedLanguage;
+        button.classList.toggle("active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      });
+
+      localStorage.setItem("pozzytron-language", selectedLanguage);
+    }
+
+    document.querySelectorAll("[data-lang]").forEach((button) => {
+      button.addEventListener("click", () => {
+        setLanguage(button.dataset.lang);
+      });
+    });
+
+    setLanguage(getInitialLanguage());
+
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+
+      if (loader) {
+        loader.classList.add("loader-hidden");
+      }
+    });
+  </script>
 </body>
 </html>
